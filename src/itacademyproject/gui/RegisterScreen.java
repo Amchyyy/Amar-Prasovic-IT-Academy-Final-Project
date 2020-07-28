@@ -4,6 +4,7 @@ import itacademyproject.data.SharedData;
 import itacademyproject.data.UserItem;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class RegisterScreen extends javax.swing.JFrame {
@@ -22,6 +23,8 @@ public class RegisterScreen extends javax.swing.JFrame {
 
         registerScreenBackLabelNormalColor = registerScreenBackLabel.getForeground();
         registerScreenBackLabelHighlightColor = Color.black;
+
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
     }
 
     @SuppressWarnings("unchecked")

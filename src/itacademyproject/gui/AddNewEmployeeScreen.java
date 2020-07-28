@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import itacademyproject.data.*;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class AddNewEmployeeScreen extends JFrame {
 
@@ -43,6 +44,8 @@ public class AddNewEmployeeScreen extends JFrame {
         
         addNewEmployeeScreenBackLabelNormalColor = addNewEmployeeScreenBackLabel.getForeground();
         addNewEmployeeScreenBackLabelHighlightColor = Color.black;
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
 
     }
 

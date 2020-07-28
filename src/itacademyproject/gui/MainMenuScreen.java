@@ -2,12 +2,18 @@ package itacademyproject.gui;
 
 import javax.swing.JFrame;
 import itacademyproject.data.*;
+import java.awt.Toolkit;
 
 public class MainMenuScreen extends JFrame {
 
     public MainMenuScreen() {
         initComponents();
-        updateUI();
+        initialize();
+    }
+
+    private void initialize() {
+        welcomeUserLabel.setText(String.format("Welcome , %s !", SharedData.getCurrentUser().getUserName()));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
     }
 
     private void updateUI() {

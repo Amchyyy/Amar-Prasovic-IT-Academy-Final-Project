@@ -3,6 +3,7 @@ package itacademyproject.gui;
 import itacademyproject.data.EmployeeItem;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -45,6 +46,8 @@ public class EmployeeDataScreen extends javax.swing.JFrame {
                     employees[i].getEmail(),
                     employees[i].getLocationItem().getCountryName() + ", " + employees[i].getLocationItem().getAdress(),
                     employees[i].getJob().getName() + ", " + employees[i].getJob().getSalary()});
+                
+                setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
 
             }
 

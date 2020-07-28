@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import itacademyproject.data.*;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class AddNewJobScreen extends javax.swing.JFrame {
 
@@ -17,6 +18,8 @@ public class AddNewJobScreen extends javax.swing.JFrame {
     private void initialize() {
         addNewJobScreenBackLabelNormalColor = addNewJobScreenBackLabel.getForeground();
         addNewJobScreenBackLabelHighlightColor = Color.black;
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
     }
 
     @SuppressWarnings("unchecked")

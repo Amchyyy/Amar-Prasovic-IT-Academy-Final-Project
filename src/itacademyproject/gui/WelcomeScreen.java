@@ -1,9 +1,19 @@
 package itacademyproject.gui;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
+
 public class WelcomeScreen extends javax.swing.JFrame { 
 
     public WelcomeScreen() {
         initComponents();
+        initialize();
+    }
+    
+    private void initialize()
+    {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
     }
 
     @SuppressWarnings("unchecked")
@@ -26,11 +36,10 @@ public class WelcomeScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Welcome Screen");
         setAutoRequestFocus(false);
-        setBackground(new java.awt.Color(230, 230, 230));
         setResizable(false);
 
         titleLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titleLabel.setText("WELCOME TO THE COMPANY MANAGMENT SYSTEM");
+        titleLabel.setText("WELCOME TO THE EMPLOYEE MANAGMENT SYSTEM");
 
         mainPanel.setBackground(new java.awt.Color(235, 235, 235));
         mainPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

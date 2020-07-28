@@ -30,9 +30,8 @@ public class JobsDatabaseExecutor {
             while(rs.next())
             {
                 String jobName = rs.getString("name");
-                double jobSalary = rs.getDouble("salary");
                 
-                if(job.getName().equals(jobName) && job.getSalary() == jobSalary)
+                if(job.getName().equals(jobName))
                 {
                     con.close();
                     

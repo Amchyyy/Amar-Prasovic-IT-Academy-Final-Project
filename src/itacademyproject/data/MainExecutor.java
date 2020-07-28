@@ -1,9 +1,10 @@
 package itacademyproject.data;
 
-import itacademyproject.slq.DatabaseManager;
-import java.lang.ClassNotFoundException;
-import java.sql.*;
+import java.beans.PropertyDescriptor;
+import java.time.LocalDate;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 public class MainExecutor {
     
@@ -11,8 +12,25 @@ public class MainExecutor {
     
     public static void main(String[] args)
     {
-        System.out.println(DatabaseManager.jobs.isPossibleToDeleteAJob(0));
+      //POJO (Plain Old Java Object)
+        
+        
     }
+    
+    
+    private class PojoClass // POJO, properties are public!
+    {
+        public String firstName;
+        public String lastName;
+        
+        public String getName()
+        {
+            return firstName + " " + lastName;
+        }
+        
+        
+    }
+            
             
 }
 

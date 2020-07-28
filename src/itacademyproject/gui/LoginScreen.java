@@ -4,6 +4,7 @@ import itacademyproject.data.SharedData;
 import itacademyproject.data.UserItem;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class LoginScreen extends javax.swing.JFrame {
@@ -18,26 +19,23 @@ public class LoginScreen extends javax.swing.JFrame {
 
     @Override
     public void setVisible(boolean b) {
-        super.setVisible(b); 
-        
-        if(DatabaseManager.registeredUsers.getUserCount() == 0)
-        {
+        super.setVisible(b);
+
+        if (DatabaseManager.registeredUsers.getUserCount() == 0) {
             this.dispose();
-            
+
             JOptionPane.showMessageDialog(null, "You have no accounts to login to system.Go to 'Register Screen' and add an account!");
-            
+
             new RegisterScreen().setVisible(true);
         }
-        
-        
-        
+
     }
-    
-    
 
     private void initialize() {
         loginScreenBackLabelNormalColor = loginScreenBackLabel.getForeground();
         loginScreenBackLabelHighlightColor = Color.black;
+
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
     }
 
     @SuppressWarnings("unchecked")

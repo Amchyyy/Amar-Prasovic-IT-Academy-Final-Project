@@ -5,6 +5,7 @@ import itacademyproject.data.JobItem;
 import itacademyproject.data.LocationItem;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class EditEmployeeScreen extends javax.swing.JFrame {
@@ -47,6 +48,8 @@ public class EditEmployeeScreen extends javax.swing.JFrame {
 
             editEmployeeScreenBackLabelNormalColor = editEmployeeScreenBackLabel.getForeground();
             editEmployeeScreenBackLabelHighlightColor = Color.black;
+            
+            setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
         }
 
     }

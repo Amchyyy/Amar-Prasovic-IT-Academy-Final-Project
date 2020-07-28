@@ -3,6 +3,7 @@ package itacademyproject.gui;
 import itacademyproject.data.JobItem;
 import itacademyproject.slq.DatabaseManager;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class DeleteJobScreen extends javax.swing.JFrame {
@@ -39,6 +40,8 @@ public class DeleteJobScreen extends javax.swing.JFrame {
 
             deleteJobScreenBackLabelNormalColor = deleteJobScreenBackLabel.getForeground();
             deleteJobScreenBackLabelHighlightColor = Color.black;
+            
+            setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/itacademyproject/pics/icon_64x64.png")));
         }
 
     }
